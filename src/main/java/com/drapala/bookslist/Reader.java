@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -25,15 +27,20 @@ public class Reader implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        scanner = new Scanner(new FileReader("C:\\Users\\maczi\\Documents\\projekty\\books-list\\src\\main\\resources\\static\\books.txt"));
-        scanner.useDelimiter("-");
-        while (scanner.hasNextLine()) {
-            String name = scanner.next();
-            scanner.skip(scanner.delimiter());
-            String author = scanner.nextLine();
-            log.info("Imported book name: {}, author: {}", name, author);
-            Book tempBook = new Book(name, author);
-            bookService.addBook(tempBook);
+        try (BufferedReader dirFile = new BufferedReader(new FileReader("/home/jakub/Pulpit/temp/books-list/src/main/resources/static/books.txt"))) {
+            String input;
+            while ((input = dirFile.readLine()) != null) {
+                String[] data = input.split("-");
+                String name = data[0];
+                String author = null;
+                if (data.length > 1)
+                    author = data[1];
+                log.info("Imported book name: {}, author: {}", name, author);
+                Book tempBook = new Book(name, author);
+                bookService.addBook(tempBook);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
