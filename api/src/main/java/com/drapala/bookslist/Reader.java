@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
 
 /**
  * Created by maczi on 2019-04-14.
@@ -23,11 +22,9 @@ public class Reader implements CommandLineRunner {
     @Autowired
     BookService bookService;
 
-    Scanner scanner = null;
-
     @Override
     public void run(String... strings) throws Exception {
-        try (BufferedReader dirFile = new BufferedReader(new FileReader("/home/jakub/Pulpit/temp/books-list/src/main/resources/static/books.txt"))) {
+        try (BufferedReader dirFile = new BufferedReader(new FileReader("/home/jakub/Pulpit/temp/books-list/api/src/main/resources/static/books.txt"))) {
             String input;
             while ((input = dirFile.readLine()) != null) {
                 String[] data = input.split("-");
