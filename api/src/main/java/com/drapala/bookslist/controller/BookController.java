@@ -13,6 +13,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(path = "/books", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@CrossOrigin(origins = "http://localhost:4200")
 public class BookController {
 
 
