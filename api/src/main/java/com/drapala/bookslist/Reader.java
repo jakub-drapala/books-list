@@ -23,7 +23,7 @@ public class Reader implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        try (BufferedReader dirFile = new BufferedReader(new FileReader("/home/jakub/Desktop/projekty/books-list/api/src/main/resources/static/books.txt"))) {
+        try (BufferedReader dirFile = new BufferedReader(new FileReader("/home/jakub/Pulpit/temp/books-list/api/src/main/resources/static/books.txt"))) {
             String input;
             while ((input = dirFile.readLine()) != null) {
                 String[] data = input.split("-");
