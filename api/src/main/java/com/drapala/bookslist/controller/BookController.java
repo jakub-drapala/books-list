@@ -3,10 +3,11 @@ package com.drapala.bookslist.controller;
 import com.drapala.bookslist.model.Book;
 import com.drapala.bookslist.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * Created by maczi on 2019-04-13.
@@ -30,8 +31,10 @@ public class BookController {
     }
 
     @GetMapping
-    public List<Book> getAllBooks() {
-        return service.getBooks();
+    public Page<Book> getAllBooks(
+            @PageableDefault Pageable page
+            ) {
+        return service.getBooks(page);
     }
 
 }

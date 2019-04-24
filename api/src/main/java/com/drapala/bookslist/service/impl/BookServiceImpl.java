@@ -4,9 +4,9 @@ import com.drapala.bookslist.model.Book;
 import com.drapala.bookslist.repository.BookRepository;
 import com.drapala.bookslist.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * Created by maczi on 2019-04-13.
@@ -28,7 +28,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public List<Book> getBooks() {
-        return repository.findAll();
+    public Page<Book> getBooks(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 }
