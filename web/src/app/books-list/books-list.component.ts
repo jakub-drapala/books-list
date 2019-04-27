@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from "../book/book.model";
 import {BookService} from "../book/book.rest.service";
+import {Sort} from "@angular/material";
 
 @Component({
   selector: 'app-books-list',
@@ -29,6 +30,18 @@ export class BooksListComponent implements OnInit {
     this.bookService.getAllBooks(this.page).subscribe(
       data => {
         console.log(this.page);
+        this.books = data['content'];
+        this.pages = new Array(data['totalPages']);
+      },
+      (error) => {
+        console.log(error.error.message);
+      }
+    );
+  }
+
+  getBooksWithOrder(order: Sort) {
+    this.bookService.getAllBooksWithSortOrder(this.page, order).subscribe(
+      data => {
         this.books = data['content'];
         this.pages = new Array(data['totalPages']);
       },

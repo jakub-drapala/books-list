@@ -32,7 +32,7 @@ public class BookController {
 
     @GetMapping
     public Page<Book> getAllBooks(
-            @PageableDefault Pageable page
+            @PageableDefault(size = 20) Pageable page
             ) {
         return service.getBooks(page);
     }
