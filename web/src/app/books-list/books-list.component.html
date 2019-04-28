@@ -1,14 +1,15 @@
 <div class="container">
 
-  <p class="title">Library</p>
-
   <hr/>
 
-  <table matSort (matSortChange)="getBooksWithOrder($event)">
+  <p class="title">Books list</p>
+
+
+  <table class="table table-striped" matSort (matSortChange)="getBooksWithOrder($event)">
     <thead>
       <tr>
-        <th mat-sort-header="name">name</th>
-        <th mat-sort-header="author">author</th>
+        <th scope="col" mat-sort-header="name">name</th>
+        <th scope="col" mat-sort-header="author">author</th>
       </tr>
     </thead>
     <tbody>
@@ -25,6 +26,25 @@
     </li>
 
   </ul>
+
+  <nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item disabled">
+        <span class="page-link">Previous</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page">
+      <span class="page-link">
+        2
+        <span class="sr-only">(current)</span>
+      </span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
 
 
 </div>

@@ -28,11 +28,12 @@ public class Reader implements CommandLineRunner {
             while ((input = dirFile.readLine()) != null) {
                 String[] data = input.split("-");
                 String name = data[0];
-                String author = null;
+                String author = "brak";
                 if (data.length > 1)
                     author = data[1];
                 log.info("Imported book name: {}, author: {}", name, author);
                 Book tempBook = new Book(name, author);
+                if (!name.equals(""))
                 bookService.addBook(tempBook);
             }
         } catch (IOException e) {
