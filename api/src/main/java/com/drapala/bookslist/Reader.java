@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 
 /**
  * Created by maczi on 2019-04-14.
@@ -17,6 +16,7 @@ import java.io.IOException;
 @Slf4j
 @Component
 public class Reader implements CommandLineRunner {
+
 
     @Autowired
     BookService bookService;
@@ -36,7 +36,9 @@ public class Reader implements CommandLineRunner {
                 if (!name.equals(""))
                 bookService.addBook(tempBook);
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
+            log.error("Any error");
+            log.info("hello world");
             e.printStackTrace();
         }
 

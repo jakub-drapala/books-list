@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 public class BookController {
 
 
-    BookService service;
+    private BookService service;
 
     @Autowired
     public BookController(BookService service) {
