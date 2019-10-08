@@ -18,16 +18,16 @@ import java.io.InputStreamReader;
 public class BookItemReader extends FlatFileItemReader<String> implements StepExecutionListener {
 
     private Resource resource;
-    private InputStream is;
+    private InputStream inputStream;
     private BufferedReader bufferedReader;
 
     @Override
     public void beforeStep(StepExecution stepExecution) {
         try {
-            this.is = resource.getInputStream();
+            this.inputStream = resource.getInputStream();
         } catch (Exception e) {
         }
-        bufferedReader = new BufferedReader(new InputStreamReader(this.is));
+        bufferedReader = new BufferedReader(new InputStreamReader(this.inputStream));
 
     }
 
@@ -40,11 +40,7 @@ public class BookItemReader extends FlatFileItemReader<String> implements StepEx
 
     @Override
     protected String doRead() throws Exception {
-        //Resource resource = new ClassPathResource("static/input/books.txt");
-        //InputStream io = resource.getInputStream();
-        //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(this.is));
         String s = bufferedReader.readLine();
-
         return s;
     }
 

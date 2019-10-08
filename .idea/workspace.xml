@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d32e99e7-6f7f-4d35-92ec-b8d6cd0244b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/BookItemReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/service/BatchService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/service/impl/BatchServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_0_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_8_0_beta4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_26.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/BookItemProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/BookItemProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/SpringBatchConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +169,9 @@
       <workItem from="1570427597765" duration="1226000" />
       <workItem from="1570429013060" duration="3267000" />
       <workItem from="1570435674182" duration="1009000" />
-      <workItem from="1570512647386" duration="6233000" />
+      <workItem from="1570512647386" duration="6431000" />
+      <workItem from="1570533100484" duration="1973000" />
+      <workItem from="1570536204094" duration="243000" />
     </task>
     <servers />
   </component>
@@ -248,12 +239,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/BookItemProcessor.java</url>
           <line>13</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/BookItemReader.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/api/src/test/java/com/drapala/bookslist/service/BookServiceTest.java</url>

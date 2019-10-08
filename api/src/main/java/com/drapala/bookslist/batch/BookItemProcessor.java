@@ -11,12 +11,16 @@ public class BookItemProcessor implements ItemProcessor<String, Book> {
 
     @Override
     public Book process(String line) throws Exception {
-        final String name = line;
-        final String author = line;
+        log.info("processing line: {}", line);
+
+        String[] bookData = line.split("-");
+        if (bookData.length < 2) return null;
+        final String name = bookData[0];
+        final String author = bookData[1];
 
         final Book importedBook = new Book();
-        importedBook.setAuthor(name);
-        importedBook.setName(author);
+        importedBook.setName(name);
+        importedBook.setAuthor(author);
 
         return importedBook;
     }
