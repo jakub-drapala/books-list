@@ -1,6 +1,7 @@
 package com.drapala.bookslist.controller;
 
 import com.drapala.bookslist.model.Book;
+import com.drapala.bookslist.service.BatchService;
 import com.drapala.bookslist.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "http://localhost:4201")
 public class BookController {
 
+    private BatchService batchService;
 
     private BookService service;
 
@@ -30,6 +32,11 @@ public class BookController {
     @ResponseStatus(HttpStatus.CREATED)
     public Book addBook(@RequestBody Book book) {
         return service.addBook(book);
+    }
+
+    @PostMapping(path = "/import")
+    public void importBooks() throws Exception {
+        batchService.runBatch();
     }
 
     @GetMapping

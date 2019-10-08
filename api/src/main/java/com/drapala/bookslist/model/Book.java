@@ -1,13 +1,10 @@
 package com.drapala.bookslist.model;
 
-import lombok.Data;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Data
 @Entity
 public class Book {
 
@@ -26,6 +23,26 @@ public class Book {
 
     public Book(String name, String author) {
         this.name = name;
+        this.author = author;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
         this.author = author;
     }
 }
