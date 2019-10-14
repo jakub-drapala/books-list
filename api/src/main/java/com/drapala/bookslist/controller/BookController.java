@@ -3,7 +3,6 @@ package com.drapala.bookslist.controller;
 import com.drapala.bookslist.model.Book;
 import com.drapala.bookslist.service.BatchService;
 import com.drapala.bookslist.service.BookService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -20,18 +19,17 @@ import org.springframework.web.bind.annotation.*;
 public class BookController {
 
     private BatchService batchService;
+    private BookService bookService;
 
-    private BookService service;
-
-    @Autowired
-    public BookController(BookService service) {
-        this.service = service;
+    public BookController(BookService bookService, BatchService batchService) {
+        this.bookService = bookService;
+        this.batchService = batchService;
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Book addBook(@RequestBody Book book) {
-        return service.addBook(book);
+        return bookService.addBook(book);
     }
 
     @PostMapping(path = "/import")
@@ -40,10 +38,8 @@ public class BookController {
     }
 
     @GetMapping
-    public Page<Book> getAllBooks(
-            @PageableDefault(size = 20) Pageable page
-            ) {
-        return service.getBooks(page);
+    public Page<Book> getAllBooks(@PageableDefault(size = 20) Pageable page) {
+        return bookService.getBooks(page);
     }
 
 }

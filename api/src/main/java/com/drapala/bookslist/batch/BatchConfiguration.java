@@ -7,7 +7,6 @@ import org.springframework.batch.core.configuration.annotation.EnableBatchProces
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,25 +14,14 @@ import org.springframework.context.annotation.Configuration;
 @EnableBatchProcessing
 public class BatchConfiguration {
 
-    @Autowired
-    public JobBuilderFactory jobBuilderFactory;
+    private JobBuilderFactory jobBuilderFactory;
+    private StepBuilderFactory stepBuilderFactory;
 
-    @Autowired
-    public StepBuilderFactory stepBuilderFactory;
-
-    /*@Bean
-    public FlatFileItemReader<Book> reader() {
-        return new FlatFileItemReaderBuilder<Book>()
-                .name("bookItemReader")
-                .resource(new ClassPathResource("static/input/books.txt"))
-                .delimited()
-                .names(new String[]{"name", "author"})
-                .fieldSetMapper(new BeanWrapperFieldSetMapper<Book>() {{
-                    setTargetType(Book.class);
-                }})
-                .build();
+    public BatchConfiguration(JobBuilderFactory jobBuilderFactory, StepBuilderFactory stepBuilderFactory) {
+        this.jobBuilderFactory = jobBuilderFactory;
+        this.stepBuilderFactory = stepBuilderFactory;
     }
-*/
+
     @Bean
     public BookItemProcessor processor() {
         return new BookItemProcessor();
