@@ -1,6 +1,7 @@
 package com.drapala.bookslist.controller;
 
-import com.drapala.bookslist.model.Book;
+import com.drapala.bookslist.enums.Cover;
+import com.drapala.bookslist.model.book.Book;
 import com.drapala.bookslist.service.BookService;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,15 +36,11 @@ public class BookControllerTest extends BaseRestControllerTest {
     @Before
     @Override
     public void init() {
-        book = new Book();
+        book = Book.Builder.builder().name("Sample title").author("John Smith").publicationDate(2000).cover(Cover.LIMP_BINDING).build();
         book.setId(2l);
-        book.setName("Sample title");
-        book.setAuthor("John Smith");
 
-        book2 = new Book();
+        book2 = Book.Builder.builder().name("Book2 name").author("Bryan Adams").publicationDate(1995).cover(Cover.HARDCOVER).build();
         book2.setId(5l);
-        book2.setName("Book2 name");
-        book2.setAuthor("Bryan Adams");
     }
 
     @Override

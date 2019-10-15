@@ -1,7 +1,8 @@
 package com.drapala.bookslist.service;
 
 import com.drapala.bookslist.TestSetup;
-import com.drapala.bookslist.model.Book;
+import com.drapala.bookslist.enums.Cover;
+import com.drapala.bookslist.model.book.Book;
 import com.drapala.bookslist.repository.BookRepository;
 import com.drapala.bookslist.service.impl.BookServiceImpl;
 import org.junit.Before;
@@ -38,15 +39,21 @@ public class BookServiceTest implements TestSetup {
     @Override
     public void init() {
         MockitoAnnotations.initMocks(this);
-        book1 = new Book();
+        book1 = Book.Builder.builder()
+                .name("Pan Tadeusz")
+                .author("Adam Mickiewicz")
+                .publicationDate(1999)
+                .cover(Cover.HARDCOVER)
+                .build();
         book1.setId(1l);
-        book1.setAuthor("Adam Mickiewicz");
-        book1.setName("Pan Tadeusz");
 
-        book2 = new Book();
+        book2 = new Book.Builder()
+                .name("Potop")
+                .author("Henryk Sienkiewicz")
+                .publicationDate(2005)
+                .cover(Cover.LIMP_BINDING)
+                .build();
         book2.setId(2l);
-        book2.setAuthor("Henryk Sienkiewicz");
-        book2.setName("Potop");
 
         booksPage = new PageImpl<>(Arrays.asList(book1, book2));
     }

@@ -1,6 +1,6 @@
 package com.drapala.bookslist.service.impl;
 
-import com.drapala.bookslist.model.Book;
+import com.drapala.bookslist.model.book.Book;
 import com.drapala.bookslist.repository.BookRepository;
 import com.drapala.bookslist.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;

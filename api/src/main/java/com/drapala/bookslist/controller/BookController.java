@@ -1,6 +1,6 @@
 package com.drapala.bookslist.controller;
 
-import com.drapala.bookslist.model.Book;
+import com.drapala.bookslist.model.book.Book;
 import com.drapala.bookslist.service.BatchService;
 import com.drapala.bookslist.service.BookService;
 import org.springframework.data.domain.Page;

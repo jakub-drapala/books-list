@@ -1,6 +1,6 @@
 package com.drapala.bookslist.batch;
 
-import com.drapala.bookslist.model.Book;
+import com.drapala.bookslist.model.book.Book;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;

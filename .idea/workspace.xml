@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d32e99e7-6f7f-4d35-92ec-b8d6cd0244b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/JobListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/enums/Cover.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/generator/DateGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/model/book/fields/Author.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/model/book/fields/Cover.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/model/book/fields/Creator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/model/book/fields/Name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/model/book/fields/PublicationDate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/Reader.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/BatchConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/BatchConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/BookItemProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/BookItemProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/BookItemWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/batch/BookItemWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/model/book/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/drapala/bookslist/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/drapala/bookslist/controller/BookControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/com/drapala/bookslist/controller/BookControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/drapala/bookslist/service/BookServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/test/java/com/drapala/bookslist/service/BookServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +37,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -178,7 +193,8 @@
       <workItem from="1570598168730" duration="1444000" />
       <workItem from="1570685153619" duration="628000" />
       <workItem from="1570770522645" duration="1872000" />
-      <workItem from="1571050002616" duration="4140000" />
+      <workItem from="1571050002616" duration="10015000" />
+      <workItem from="1571116343196" duration="2770000" />
     </task>
     <servers />
   </component>
@@ -235,7 +251,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/api/src/test/java/com/drapala/bookslist/service/BookServiceTest.java</url>
-          <line>60</line>
+          <line>67</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -255,7 +271,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/api/src/test/java/com/drapala/bookslist/service/BookServiceTest.java</url>
-          <line>59</line>
+          <line>66</line>
           <properties class="com.drapala.bookslist.service.BookServiceTest" method="addBookTest">
             <option name="EMULATED" value="true" />
           </properties>

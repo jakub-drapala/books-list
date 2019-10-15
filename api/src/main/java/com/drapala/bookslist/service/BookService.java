@@ -1,6 +1,6 @@
 package com.drapala.bookslist.service;
 
-import com.drapala.bookslist.model.Book;
+import com.drapala.bookslist.model.book.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
