@@ -2,10 +2,7 @@ package com.drapala.bookslist.model.book;
 
 import com.drapala.bookslist.model.book.fields.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Book {
@@ -24,6 +21,7 @@ public class Book {
     private Integer publicationDate;
 
     @Column
+    @Enumerated(EnumType.STRING)
     private com.drapala.bookslist.enums.Cover cover;
 
     public static class Builder implements Name, Author, PublicationDate, Cover, Creator {
